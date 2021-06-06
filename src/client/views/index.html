@@ -20,8 +20,12 @@
     <main>
         <section>
             <form class="" onsubmit="return Client.handleSubmit(event)">
-                <input id="name" type="text" name="input" value="" placeholder="Name">
-                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+                <input id="city" type="text" name="city" value="" placeholder="city">
+                <div class="row">
+                    <div class="col-large-6"> Start Date <input type="date" id="start-date"></div>
+                    <div class="col-large-6"> End Date<input type="date" id="end-date"></div>
+                </div>
+                <input type="submit" name="" class="btn-primary" value="submit" onclick="return Client.handleSubmit(event)"
                     onsubmit="return Client.handleSubmit(event)">
             </form>
         </section>
@@ -29,16 +33,13 @@
         <section>
             <div class="card">
                 <div class="card-header">
-                    Form Results:
+                    Weather Forecast
                 </div>
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
-                        <strong>Meaning Clouds Sentiment Analysis</strong>
-                        <div id="agreement"></div>
-                        <div id="confidence"></div>
-                        <div id="irony"></div>
-                        <div id="polarity"></div>
-                        <div id="subjectivity"></div>
+                        <div id="picture"></div>
+                        <div id="weather" class="row"></div> 
+                        <div id="sub-pic"></div>                      
                     </blockquote>
                 </div>
             </div>
