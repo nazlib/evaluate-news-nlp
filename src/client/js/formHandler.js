@@ -56,11 +56,11 @@ const handleSubmit = async event => {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(cityLatLon),
+        body: JSON.stringify(geoLocation),
     }).then(res => res.json())
         .then(async res => {
             
-        console.log('PicData:', { cityLatLongeoLocation });
+        console.log('PicData:', { geoLocation });
             picData = res;
             let pictureHtml = `<div class="city-image">
                                        <img id="city-img" class="main-image" src="${picData.hits[0].webformatURL}">
@@ -80,7 +80,7 @@ const handleSubmit = async event => {
 
     let weatherHtml = '';
     let colors = ['red', 'green', 'yellow', 'blue']
-    receivedWeatherInJson.data.forEach((element, index) => {
+    weatherData.data.forEach((element, index) => {
         weatherHtml += `<div class="col-large-6">
         <div class="weather-${colors[index]}">
             <div class="weather-card-body">
